@@ -28,7 +28,7 @@ let posts = [
     {
         id:uuidv4(),
         username : "Rohit",
-        content : "I get selected for my 1st enternship"
+        content : "I get selected for my 1st internship"
     },
 ];
 
@@ -51,7 +51,7 @@ app.get("/posts/:id",(req,res) =>{
     let {id} = req.params;
     let post = posts.find((p) => id === p.id);
     res.render("show.ejs",{post});
-})
+});
 
 app.patch("/posts/:id",(req,res) =>{
     let { id } = req.params;
